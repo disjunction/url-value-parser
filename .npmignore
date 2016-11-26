@@ -1,0 +1,6 @@
+test
+docker-compose.yml
+.travis.yml
+.eslintrc
+Makefile
+coverage

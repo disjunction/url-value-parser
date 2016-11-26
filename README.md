@@ -1,0 +1,43 @@
+[![build status](https://api.travis-ci.org/disjunction/url-value-parser.png)](https://travis-ci.org/disjunction/url-value-parser)
+[![Coverage Status](https://coveralls.io/repos/github/disjunction/url-value-parser/badge.svg?branch=master&bust=1)](https://coveralls.io/github/disjunction/url-value-parser?branch=master)
+
+# UrlValueParser
+
+A helper ES6 class letting you extract values from URL paths,
+leaving the other parts untouched.
+
+It uses an internal class `ValueDetector` determining
+what is a value and what is not. By default the following
+path chunks are considered values:
+
+* decimal numbers
+* strings in UUID format
+* hex numbers consisting of 7 or more characters
+  and consistent lower or upper case
+
+You can customize all of the logic by providing options,
+overriding methods or providing your own value detector.
+See the source - it's easy, i promise.
+
+## Usage
+
+```javascript
+const UrlValueParser = require('url-value-parser');
+const parser = new UrlValueParser();
+
+parser.parsePathValues('/some/path/154/userId/ABC363AFE2');
+/*
+ here the values would be 154 and ABC363AFE2
+ thus it returns:
+
+  {
+    chunks: ['some', 'path', '154', 'userId', 'ABC363AFE2'],
+    valueIndexes: [2, 5]
+  }
+*/
+
+parser.replacePathValues('/some/path/154/userId/ABC363AFE2', '#id');
+// returns: /some/path/#id/userId/#id
+```
+
+For options, see the source
