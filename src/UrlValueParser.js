@@ -38,7 +38,7 @@ class UrlValueParser {
     replacement = replacement || '#val';
     const parseResult = this.parsePathValues(path);
     return '/' + parseResult.chunks
-      .map((chunk, i) => parseResult.valueIndexes.includes(i)
+      .map((chunk, i) => parseResult.valueIndexes.indexOf(i) >= 0
         ? (
             typeof replacement === 'function'
               ? replacement(parseResult.chunks, i)

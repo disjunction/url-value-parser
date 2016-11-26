@@ -16,7 +16,7 @@ describe('UrlValueParser', () => {
   });
 
   describe('replacePathValues()', () => {
-    it('works ith default replacement', () => {
+    it('works with default replacement', () => {
       const o = new UrlValueParser();
       const replaced = o.replacePathValues('/in/world/14/userId/abca12d231');
       expect(replaced).toBe('/in/world/#val/userId/#val');
