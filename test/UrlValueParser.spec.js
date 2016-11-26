@@ -1,3 +1,5 @@
+'use strict';
+
 /* eslint-env jasmine */
 const UrlValueParser = require('../src/UrlValueParser');
 
