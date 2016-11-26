@@ -23,7 +23,7 @@ See the source - it's easy, i promise.
 
 ```javascript
 const UrlValueParser = require('url-value-parser');
-const parser = new UrlValueParser();
+const parser = new UrlValueParser(/* {options} */);
 
 parser.parsePathValues('/some/path/154/userId/ABC363AFE2');
 /*
