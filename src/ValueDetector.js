@@ -1,3 +1,5 @@
+'use strict';
+
 class ValueDetector {
   constructor(opts) {
     this.valueMasks = opts.valueMasks || [

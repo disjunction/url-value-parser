@@ -1,3 +1,5 @@
+'use strict';
+
 const ValueDetector = require('./ValueDetector');
 
 class UrlValueParser {
