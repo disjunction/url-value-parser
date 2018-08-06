@@ -19,12 +19,12 @@
     "id"
   ],
   "devDependencies": {
-    "coveralls": "^2.11.11",
+    "coveralls": "^3.0.2",
     "eslint": "^3.0.1",
     "istanbul": "^0.4.4",
     "jasme": "^5.2.0"
   },
   "engines": {
-      "node": ">=6.0.0"
+    "node": ">=6.0.0"
   }
 }
