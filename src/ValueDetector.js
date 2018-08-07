@@ -34,20 +34,14 @@ class ValueDetector {
 
       // classic Base64
       RegExp(`^(?:[A-Za-z0-9+/]{4}){${base64Quartets},}(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?`)
-    ]).concat(opts.extraMasks || []);
+    ])
+      .concat(opts.extraMasks || [])
+      .map(mask => typeof mask === 'string' ? RegExp(mask) : mask);
   }
 
-  static matchToMask(chunks, index, mask) {
-    if (typeof mask === 'string') {
-      return chunks[index] === mask;
-    } else {
-      return chunks[index].match(mask);
-    }
-  }
-
-  isValue(chunks, index) {
+  isValue(str) {
     for (let mask of this.valueMasks) {
-      if (ValueDetector.matchToMask(chunks, index, mask)) {
+      if (str.match(mask)) {
         return true;
       }
     }

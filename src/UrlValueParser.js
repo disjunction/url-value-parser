@@ -22,7 +22,7 @@ class UrlValueParser {
     const chunks = this.getPathChunks(path);
     const valueIndexes = [];
     for (let i = 0; i < chunks.length; i++) {
-      if (this.valueDetector.isValue(chunks, i)) {
+      if (this.valueDetector.isValue(chunks[i])) {
         valueIndexes.push(i);
       }
     }
