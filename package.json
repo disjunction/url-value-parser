@@ -1,6 +1,6 @@
 {
   "name": "url-value-parser",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "extracts and replaces values and IDs in URLs",
   "main": "src/UrlValueParser.js",
   "scripts": {
