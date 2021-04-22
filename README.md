@@ -63,3 +63,7 @@ const parser = new UrlValueParser({
   ]
 });
 ```
+
+## License
+
+WTFPL
