@@ -3,6 +3,7 @@
   "version": "2.0.3",
   "description": "extracts and replaces values and IDs in URLs",
   "main": "src/UrlValueParser.js",
+  "types": "url-value-parser.d.ts",
   "scripts": {
     "test": "./node_modules/jasme/run.js"
   },
