@@ -14,7 +14,7 @@ class ValueDetector {
     const base64Quartets = minBase64Length / 4;
 
     this.valueMasks = (replaceMasks || [
-      /^\d+$/,
+      /^\-?\d+$/,
 
       /^(\d{2}|\d{4})\-\d\d\-\d\d$/, // date
 

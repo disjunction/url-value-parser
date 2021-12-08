@@ -22,6 +22,12 @@ describe('UrlValueParser', () => {
       expect(replaced).toBe('/in/world/#val/userId/#val');
     });
 
+    it('works with negative decimal numbers', () => {
+      const o = new UrlValueParser();
+      const replaced = o.replacePathValues('/some/path/-154/userId/-ABC363AFE2');
+      expect(replaced).toBe('/some/path/#val/userId/-ABC363AFE2');
+    });
+
     it('works with a replacement as a callback', () => {
       const o = new UrlValueParser();
       const replaced = o.replacePathValues(
