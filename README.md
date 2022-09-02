@@ -66,4 +66,4 @@ const parser = new UrlValueParser({
 
 ## License
 
-WTFPL
+MIT No Attribution License
